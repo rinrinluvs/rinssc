@@ -10,11 +10,10 @@ _ __ _ _ __ |/ ___   ___  ___
 `, 'background: #222; color: #bada55')
 console.log("Always slaying, never paying\nShow me this easter egg for a smile :)")
 
-
 function setup() {
-    createCanvas(400, 300) // B: Walls
-    // noLoop()
-    // frameRate(20)
+  createCanvas(400, 300) // B: Walls
+  // noLoop()
+  // frameRate(20)
 }
 
 // variables
@@ -35,130 +34,130 @@ let hasStarted = false
 
 // A - Bouncing ball
 function draw() {
-    if (!hasStarted) {
-        background(128)
-        // text(currentScore, 200, 25)
-        textAlign(CENTER)
-        rectMode(CENTER)
-        textSize(50)
-        text("START?", 200, 100)
-        fill(0, 255, 0)
-        rect(200, 150, 200, 50)
-        // rect(250, 150, 50)
-        fill(100)
-        text("YES", 200, 168)
-        // text(`High: ${highScore}`, 185, 10) 
-        
-        return;
-    }
+  if (!hasStarted) {
+      background(128)
+      // text(currentScore, 200, 25)
+      textAlign(CENTER)
+      rectMode(CENTER)
+      textSize(50)
+      text("START?", 200, 100)
+      fill(0, 255, 0)
+      rect(200, 150, 200, 50)
+      // rect(250, 150, 50)
+      fill(100)
+      text("YES", 200, 168)
+      // text(`High: ${highScore}`, 185, 10) 
+      
+      return;
+  }
 
-    if(currentScore > 50) {
-        textSize(500);
-    }
-    rectMode(CORNER)
-    textAlign(CENTER)
-    textSize(12)
-    background(128)
+  if(currentScore > 50) {
+      textSize(500);
+  }
+  rectMode(CORNER)
+  textAlign(CENTER)
+  textSize(12)
+  background(128)
 
-    // H - Reset & J - Implement feature
-    if (frame == 2000) {
-        // reset vars
-        ballXPos = 50
-        ballYPos = 50
-        ballXVelocity = Math.random() * 5 // 10 pixels every frame
-        ballYVelocity = Math.random() * 5 // 10 pixels every frame
-        frame = 1
-        hasStarted = false
+  // H - Reset & J - Implement feature
+  if (frame == 1000) {
+      // reset vars
+      ballXPos = 50
+      ballYPos = 50
+      ballXVelocity = Math.random() * 5 // 10 pixels every frame
+      ballYVelocity = Math.random() * 5 // 10 pixels every frame
+      frame = 1
+      hasStarted = false
 
-        // I - Hi-Score
-        if (currentScore > highScore) {
-            highScore = currentScore
-        }
-        currentScore = 0
+      // I - Hi-Score
+      if (currentScore > highScore) {
+          highScore = currentScore
+      }
+      currentScore = 0
 
-    }
+  }
 
-    text(currentScore, 200, 25)
-    text(`High: ${highScore}`, 200, 10)
-    console.log(`Frame ${frame}`)
+  text(currentScore, 200, 25)
+  text(`High: ${highScore}`, 200, 10)
+  // console.log(`Frame ${frame}`)
 
-    frame++
-    ballXPos = ballXPos + ballXVelocity
-    ballYPos = ballYPos + ballYVelocity
+  frame++
+  ballXPos = ballXPos + ballXVelocity
+  ballYPos = ballYPos + ballYVelocity
 
-    if (ballXPos < 370 || ballYPos < 275 || ballXPos > 30 || ballYPos > 25) {
-        let idx = Math.floor(Math.random())
-        lotteryWinners[idx] + (Math.random() *3)
-    } 
+  if (ballXPos < 370 || ballYPos < 275 || ballXPos > 30 || ballYPos > 25) {
+      let idx = Math.floor(Math.random())
+      lotteryWinners[idx] + (Math.random() *3)
+  } 
 
-    // console.log(ballXPos)
-    // C - change the color
-    if (ballXPos > 370) {
-        ballXVelocity = -ballXVelocity
-        console.log("Hit")
-        fill(Math.floor(Math.random() * 255) + 1, Math.floor(Math.random() * 255) + 1, Math.floor(Math.random() * 255) + 1)
-        // console.log(ballVelocity)
-    }
-    if (ballXPos < 25) {
-        ballXVelocity = -ballXVelocity
-        console.log("Hit")
-        fill(Math.floor(Math.random() * 255) + 1, Math.floor(Math.random() * 255) + 1, Math.floor(Math.random() * 255) + 1)
+  // console.log(ballXPos)
+  // C - change the color
+  if (ballXPos > 370) {
+      ballXVelocity = -ballXVelocity
+      // console.log("Hit")
+      fill(Math.floor(Math.random() * 255) + 1, Math.floor(Math.random() * 255) + 1, Math.floor(Math.random() * 255) + 1)
+      // console.log(ballVelocity)
+  }
+  if (ballXPos < 25) {
+      ballXVelocity = -ballXVelocity
+      // console.log("Hit")
+      fill(Math.floor(Math.random() * 255) + 1, Math.floor(Math.random() * 255) + 1, Math.floor(Math.random() * 255) + 1)
 
-        // console.log(ballVelocity)
-    }
-    if (ballYPos > 275 ) {
-        ballYVelocity = -ballYVelocity
-        console.log("Hit")
-        fill(Math.floor(Math.random() * 255) + 1, Math.floor(Math.random() * 255) + 1, Math.floor(Math.random() * 255) + 1)
+      // console.log(ballVelocity)
+  }
+  if (ballYPos > 275 ) {
+      ballYVelocity = -ballYVelocity
+      // console.log("Hit")
+      fill(Math.floor(Math.random() * 255) + 1, Math.floor(Math.random() * 255) + 1, Math.floor(Math.random() * 255) + 1)
 
-        // console.log(ballVelocity)
-    }
-    if (ballYPos < 25) {
-        ballYVelocity = -ballYVelocity
-        console.log("Hit")
-        fill(Math.floor(Math.random() * 255) + 1, Math.floor(Math.random() * 255) + 1, Math.floor(Math.random() * 255) + 1)
+      // console.log(ballVelocity)
+  }
+  if (ballYPos < 25) {
+      ballYVelocity = -ballYVelocity
+      // console.log("Hit")
+      fill(Math.floor(Math.random() * 255) + 1, Math.floor(Math.random() * 255) + 1, Math.floor(Math.random() * 255) + 1)
 
-        // console.log(ballVelocity)
-    }
+      // console.log(ballVelocity)
+  }
 
-    if (Math.abs(mouseX - ballXPos) < 8) {
-        currentScore++
-    }
+  if (Math.abs(mouseX - ballXPos) < 8) {
+      currentScore++
+  }
 
 
-    // circle(200, 30, 50)
+  // circle(200, 30, 50)
 
-    // circle(200, 275, 50) // y hits bottom
-    // circle(200, 25, 50) // y hits top
-    // circle(25, 30, 50) // x hits left
-    circle(ballXPos, ballYPos, 50) // x hits right
+  // circle(200, 275, 50) // y hits bottom
+  // circle(200, 25, 50) // y hits top
+  // circle(25, 30, 50) // x hits left
+  circle(ballXPos, ballYPos, 50) // x hits right
 
 }
 
 let delay = 1000
 let lastClicked = 0
 
-function mouseClicked() {
-    //  G - A (Click too much, faster)
-    
-    if (!hasStarted) {
-        if (mouseX > 100 && mouseX < 300 && mouseY > 125 && mouseY < 175) {
-           hasStarted = true  
-           console.log(hasStarted) 
-        }
-    }
-    // console.log(event)
-    if (lastClicked <= (Date.now() - delay)) {
-        let adder = Math.floor(Math.random() * 2 + 1)
-        ballXVelocity = adder + ballXVelocity
-        ballYVelocity = adder + ballYVelocity
-    }
-    if (Math.abs(mouseX - ballXPos < 20)) {
-        let scoreMultiplier = Math.floor(Math.random() * 2) + 1
-        currentScore = currentScore * scoreMultiplier
-    } else {
-        currentScore = Math.ceil(currentScore / 2)
-    }
+function mouseClicked(event) {
+  //  G - A (Click too much, faster)
+  
+  if (!hasStarted) {
+      if (mouseX > 100 && mouseX < 300 && mouseY > 125 && mouseY < 175) {
+         hasStarted = true  
+      //    console.log(hasStarted) 
+      }
+  }
+  // console.log(event)
+  if (lastClicked <= (Date.now() - delay)) {
+      let adder = Math.floor(Math.random() * 2 + 1)
+      ballXVelocity = adder + ballXVelocity
+      ballYVelocity = adder + ballYVelocity
+  }
+  if (Math.abs(mouseX - ballXPos < 20)) {
+      let scoreMultiplier = Math.floor(Math.random() * 2) + 1
+      currentScore = currentScore * scoreMultiplier
+  } else {
+      currentScore = Math.ceil(currentScore / 2)
+  }
 
-    lastClicked = Date.now()
+  lastClicked = Date.now()
 }
