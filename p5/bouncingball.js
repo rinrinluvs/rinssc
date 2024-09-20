@@ -1,3 +1,16 @@
+console.log('%c' + String.raw`
+    _       _                
+   (_)     ( )               
+_ __ _ _ __ |/ ___   ___  ___ 
+| '__| | '_ \  / __| / __|/ __|
+| |  | | | | | \__ \ \__ \ (__ 
+|_|  |_|_| |_| |___/ |___/\___|
+                             
+                             
+`, 'background: #222; color: #bada55')
+console.log("Always slaying, never paying\nShow me this easter egg for a smile :)")
+
+
 function setup() {
     createCanvas(400, 300) // B: Walls
     // noLoop()
@@ -48,7 +61,7 @@ function draw() {
     background(128)
 
     // H - Reset & J - Implement feature
-    if (frame == 150) {
+    if (frame == 2000) {
         // reset vars
         ballXPos = 50
         ballYPos = 50
@@ -125,7 +138,7 @@ function draw() {
 let delay = 1000
 let lastClicked = 0
 
-function mouseClicked(event) {
+function mouseClicked() {
     //  G - A (Click too much, faster)
     
     if (!hasStarted) {
