@@ -48,7 +48,7 @@ function draw() {
     background(128)
 
     // H - Reset & J - Implement feature
-    if (frame == 150) {
+    if (frame == 1000) {
         // reset vars
         ballXPos = 50
         ballYPos = 50
