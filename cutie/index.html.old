@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- <link href="./assets/styles/styles.css" rel="stylesheet" type="text/css" media="all"> -->
+  </head>
+  <body>
+  <div class="background">
+  <div class="attention">
+  <p class="secret" id="wilk">DO YOU WANT TO SEE A... CRABBY <a href="/cua">SECRET?</a></p>
+  <h1 class="center">Welcome to the <span class="rainbow">Land of Beautifulness</span></h1><br/>
+  <p class="lato center">Arrivederci!
+  <a href="https://guthib.com">Walcome</a><br/>
+  </p><br>
+  <h2 class="center">Explore your options</h2>
+  <div id="nav">
+  <ul class="center">
+    <li><a href="/events.html">Events</a></li>
+    <li><a href="/lore.html">Lore</a></li>
+    <li><a href="/message.html">Message</a></li>
+  </ul>
+  </div>
+  <!--<h2 class="center">MEET MY FAMILY</h2>-->
+  <!--<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3NxdGV3Mnp4bG92YnQ5bHF0a2FnbDR0OGNtNDhqMDRnMnZ4YmhkNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fr5FzY9x9gQyq6Ly5B/giphy.webp">-->
+  <!--<br>This is my sister in law-->
+  </div>
+  </div>
+  </body>
+</html>
